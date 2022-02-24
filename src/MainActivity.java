@@ -12,12 +12,14 @@ public class MainActivity {
 
 	public static void main(String args[]) {
 
-		long start2 = System.currentTimeMillis();
+		
 
 		String comb = null;
 		System.out.println("Enter the string to find all the combinations:");
 		Scanner sc = new Scanner(System.in);
 		comb = sc.next();
+		
+		long start2 = System.currentTimeMillis();
 
 		MainActivity combobj = new MainActivity(comb);
 		System.out.println("");
