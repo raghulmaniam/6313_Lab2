@@ -39,10 +39,10 @@ public class MainActivity {
 	}
 
 	public void combine() {
-		combine(0);
+		combineString(0);
 	}
 
-	private void combine(int start) {
+	private void combineString(int start) {
 		
 		for (int i = start; i < inputstring.length(); ++i) {
 			output.append(inputstring.charAt(i));
@@ -50,7 +50,7 @@ public class MainActivity {
 			count++;
 			System.out.print("|");
 			if (i < inputstring.length())
-				combine(i + 1);
+				combineString(i + 1);
 			output.setLength(output.length() - 1);
 		}
 	}
