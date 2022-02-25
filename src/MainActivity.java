@@ -4,6 +4,7 @@ public class MainActivity {
 
 	private StringBuilder output = new StringBuilder();
 	private final String inputstring;
+	static int count = 0;
 
 	public MainActivity(final String str) {
 		inputstring = str;
@@ -32,6 +33,7 @@ public class MainActivity {
 		long end2 = System.currentTimeMillis();
 
 		System.out.println( " \n " );
+		System.out.println("Total Combinations: " +count);
 		System.out.println("Elapsed Time in milli seconds: " + (end2 - start2));
 
 	}
@@ -41,10 +43,12 @@ public class MainActivity {
 	}
 
 	private void combine(int start) {
+		
 		for (int i = start; i < inputstring.length(); ++i) {
 			output.append(inputstring.charAt(i));
 			System.out.print(output);
-			System.out.print(" | ");
+			count++;
+			System.out.print("|");
 			if (i < inputstring.length())
 				combine(i + 1);
 			output.setLength(output.length() - 1);
